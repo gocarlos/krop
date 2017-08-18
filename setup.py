@@ -41,9 +41,11 @@ setup(
         long_description = read('README'),
         keywords = 'pdf crop ereader',
         packages = ['krop'],
+        include_package_data=True,
+        install_requires=read('requirements.txt'),
         scripts = ['bin/krop'],
         classifiers = [
-            'Development Status :: 3 - Alpha',
+            'Development Status :: 4 - Beta',
             'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
             'Topic :: Utilities',
             'Intended Audience :: End Users/Desktop',
