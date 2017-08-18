@@ -11,7 +11,14 @@ type:               app
 apps:
   krop-app:
     command:        desktop-launch krop
-    plugs:          [unity7, home, removable-media, browser-support, x11]
+    plugs:
+      - unity7
+      - home
+      - removable-media
+      - browser-support
+      - x11
+      - gsettings # FIXME eventually not needed
+
 
 parts:
   krop-app:
@@ -24,5 +31,8 @@ parts:
       - python3-pyqt4
       - libc-bin
       - locales
-      - ubuntu-ui-toolkit-theme
+      - ubuntu-ui-toolkit-theme # FIXME eventually not needed
+      - gnome-themes-standard
+      # - gtk-3-examples
+      # - qt4-demos
     after:          [desktop-qt4]
