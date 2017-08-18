@@ -21,3 +21,4 @@ parts:
       - python3-pyqt4
       - libc-bin
       - locales
+      - ubuntu-ui-toolkit-theme
