@@ -9,3 +9,6 @@ Icon=${SNAP}/meta/gui/icon.png
 MimeType=application/pdf;
 Categories=Qt;KDE;Utility;
 Keywords=pdf;crop;rotate;ereader;
+StartupNotify=true
+Terminal=false
+MimeType=x-scheme-handler/pdf;

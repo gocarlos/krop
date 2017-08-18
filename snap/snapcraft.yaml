@@ -6,10 +6,11 @@ description:        |
 
 grade:              stable
 confinement:        strict
+type:               app
 
 apps:
   krop-app:
-    command:        krop
+    command:        desktop-launch krop
     plugs:          [unity7, home, removable-media, browser-support, x11]
 
 parts:
@@ -24,3 +25,4 @@ parts:
       - libc-bin
       - locales
       - ubuntu-ui-toolkit-theme
+    after:          [desktop-qt4]
