@@ -33,6 +33,7 @@ parts:
       - locales
       - ubuntu-ui-toolkit-theme # FIXME eventually not needed
       - gnome-themes-standard
+      - gir1.2-gtk-3.0
       # - gtk-3-examples
       # - qt4-demos
     after:          [desktop-qt4]
