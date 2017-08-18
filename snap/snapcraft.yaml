@@ -14,4 +14,10 @@ apps:
 parts:
   krop-app:
     plugin:   python
-    build-packages: [python-poppler-qt4, python-pypdf2]
+    # build-packages:
+    stage-packages:
+      - python3-poppler-qt4
+      - python3-pypdf2
+      - python3-pyqt4
+      - libc-bin
+      - locales

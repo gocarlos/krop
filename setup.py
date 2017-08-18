@@ -12,7 +12,8 @@ the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 """
 
-from distutils.core import setup
+# from distutils.core import setup
+from setuptools import setup
 
 
 # Automatically determine version from first line of ChangeLog file
@@ -41,7 +42,7 @@ setup(
         long_description = read('README'),
         keywords = 'pdf crop ereader',
         packages = ['krop'],
-        include_package_data=True,
+        # include_package_data=True,
         install_requires=read('requirements.txt'),
         scripts = ['bin/krop'],
         classifiers = [
@@ -49,7 +50,7 @@ setup(
             'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
             'Topic :: Utilities',
             'Intended Audience :: End Users/Desktop',
-            'Programming Language :: Python :: 2',
+            # 'Programming Language :: Python :: 2',
             'Programming Language :: Python :: 3',
             'Environment :: X11 Applications :: Qt',
         ],
