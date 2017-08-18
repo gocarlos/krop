@@ -25,12 +25,12 @@ or search for **krop** in the software center.
 
 
 ## Usage
-to start GUI type: 
+##### To start GUI type: 
 ```bash
 krop.krop-app
 ``` 
 More advanced CLI comands can be found on Armins webpage
 
-to start the GUI app without terminal: 
+##### To start the GUI app without terminal: 
 
 search for krop in gnome, KDE menu etc.
