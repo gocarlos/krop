@@ -6,6 +6,7 @@ Comment=A tool to crop PDF files
 TryExec=krop
 Exec=krop %F
 # Icon=edit-cut
+Terminal=true
 Icon=${SNAP}/meta/gui/icon.png
 MimeType=application/pdf;
 Categories=Qt;KDE;Utility;
