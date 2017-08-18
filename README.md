@@ -7,6 +7,6 @@ type:
 ```bash
 sudo snap install krop
 ```
-or search for krop in the software center. 
+or search for **krop** in the software center. 
 
 <!-- TODO add there the link to the software-->
