@@ -39,7 +39,7 @@ setup(
         author_email = 'mail@arminstraub.com',
         url = 'http://arminstraub.com/software/krop',
         description = 'A tool to crop PDF files',
-        long_description = read('README'),
+        long_description = read('README.md'),
         keywords = 'pdf crop ereader',
         packages = ['krop'],
         # include_package_data=True,
