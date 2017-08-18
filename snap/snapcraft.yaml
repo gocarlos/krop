@@ -18,6 +18,7 @@ parts:
     plugin:         python
     python-version: python3
     stage-packages:
+      - python3-sip
       - python3-poppler-qt4
       - python3-pypdf2
       - python3-pyqt4

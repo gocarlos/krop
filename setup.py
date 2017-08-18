@@ -43,7 +43,7 @@ setup(
         keywords = 'pdf crop ereader',
         packages = ['krop'],
         # include_package_data=True,
-        install_requires=read('requirements.txt'),
+        # install_requires=read('requirements.txt'),
         scripts = ['bin/krop'],
         classifiers = [
             'Development Status :: 4 - Beta',
