@@ -14,7 +14,6 @@ apps:
 parts:
   krop-app:
     plugin:   python
-    # build-packages:
     stage-packages:
       - python3-poppler-qt4
       - python3-pypdf2
