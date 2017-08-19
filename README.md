@@ -1,6 +1,6 @@
 <h1 align="center">
   <img
-  src="https://raw.githubusercontent.com/gocarlos/krop/master/snap/gui/icon.png" style="max-width:200px;">
+  src="https://raw.githubusercontent.com/gocarlos/krop/master/snap/gui/icon.png" style="width:200px;">
   <br />
 
 Krop</h1>
