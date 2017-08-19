@@ -21,13 +21,14 @@ krop is a simple graphical tool to crop the pages of PDF files. It is written in
 
 ## Installation:
 The installation can be done using the terminal or using the software center.
-* Terminal -> type:
+
+* <img src="snap/gui/Gnome-terminal.png" align="top" width="50" /> Terminal -> type:
     ```bash
     sudo snap install krop
     ```
-* Software center -> search for **krop**.
+* <img src="snap/gui/Gnome-software.jpg" align="top" width="50" /> Software center -> search for **krop**.
 
-<!-- TODO add there the link to the software-->
+* Direct [download](https://uappexplorer.com/snap/ubuntu/krop)
 
 
 ## Usage
@@ -39,11 +40,17 @@ The installation can be done using the terminal or using the software center.
     krop.krop-app
     ```
 
-    More advanced CLI comands can be found on [Armins webpage](http://arminstraub.com/software/krop#afewtricks)
+
 
 * ##### To start the GUI app without terminal:
 
     search for krop in gnome, KDE menu etc.
+* ##### To use the app without GUI:
+    For more cli commands type
+    ```bash
+    krop.krop-app --help
+    ```
+    Or consult [Armins webpage](http://arminstraub.com/software/krop#afewtricks)
 
 
 ## Disclaimer:
