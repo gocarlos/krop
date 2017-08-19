@@ -17,7 +17,6 @@ apps:
       - removable-media
       - browser-support
       - x11
-      # - gsettings # FIXME eventually not needed
 
 parts:
   krop-app:
@@ -28,11 +27,5 @@ parts:
       - python3-poppler-qt4
       - python3-pypdf2
       - python3-pyqt4
-      # - libc-bin
-      # - locales
-      # - ubuntu-ui-toolkit-theme # FIXME eventually not needed
-      # - gnome-themes-standard
-      # - gir1.2-gtk-3.0
-      # - gtk-3-examples
-      # - qt4-demos
+
     after:          [desktop-qt4]
