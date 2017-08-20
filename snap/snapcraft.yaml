@@ -28,19 +28,25 @@ parts:
       - python3-poppler-qt4
       - python3-pypdf2
       - python3-pyqt4
+
       # FIXME: check if those packages are needed.
       - xcursor-themes
       - fonts-liberation
       - libqtgui4
       - libqtcore4
-      
+
       - dmz-cursor-theme
       - light-themes
       - adwaita-icon-theme
       - gnome-themes-standard
       - shared-mime-info
-      
+
       - libcanberra-gtk-module
       - libcanberra-gtk3-module
-      
+      - xdg-utils  # https://www.freedesktop.org/wiki/Software/xdg-utils/
+
+      - libgail-common
+      - libatk-adaptor
+      - unity-gtk-module-common
+
     after:          [desktop-qt4]
