@@ -17,6 +17,7 @@ apps:
       - removable-media
       - browser-support
       - x11
+      - gsettings
 
 parts:
   krop-app:
