@@ -40,4 +40,7 @@ parts:
       - gnome-themes-standard
       - shared-mime-info
       
+      - libcanberra-gtk-module
+      - libcanberra-gtk3-module
+      
     after:          [desktop-qt4]
