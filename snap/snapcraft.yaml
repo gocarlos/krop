@@ -34,4 +34,10 @@ parts:
       - libqtgui4
       - libqtcore4
       
+      - dmz-cursor-theme
+      - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
+      - shared-mime-info
+      
     after:          [desktop-qt4]
