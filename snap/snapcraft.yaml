@@ -27,5 +27,10 @@ parts:
       - python3-poppler-qt4
       - python3-pypdf2
       - python3-pyqt4
-
+      # FIXME: check if those packages are needed.
+      - xcursor-themes
+      - fonts-liberation
+      - libqtgui4
+      - libqtcore4
+      
     after:          [desktop-qt4]
