@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=krop
+GenericName=Crop PDF files
+Comment=A tool to crop PDF files
+TryExec=krop
+Exec=krop %F
+Icon=edit-cut
+MimeType=application/pdf;
+Categories=Qt;KDE;Utility;
+Keywords=pdf;crop;rotate;ereader;

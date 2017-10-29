@@ -1,6 +1,7 @@
 <h1 align="center">
-  <img
-  src="https://raw.githubusercontent.com/gocarlos/krop/master/snap/gui/icon.png" style="    max-width: 100px;">
+  <img src="https://raw.githubusercontent.com/gocarlos/krop/master/snap/gui/icon.png" style="max-width:100px;">
+
+
   <br />
 
 Krop</h1>
@@ -28,7 +29,7 @@ The installation can be done using the terminal or using the software center.
     ```
 * <img src="snap/gui/Gnome-software.jpg" align="top" width="50" /> Software center -> search for **krop**.
 
-* Direct [download](https://uappexplorer.com/snap/ubuntu/krop)
+* Direct [download](https://snapcraft.io/krop/)
 
 
 ## Usage

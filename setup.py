@@ -15,7 +15,6 @@ the Free Software Foundation; either version 3 of the License, or
 # from distutils.core import setup
 from setuptools import setup
 
-
 # Automatically determine version from first line of ChangeLog file
 import re
 with open('ChangeLog') as f:
@@ -44,10 +43,11 @@ setup(
         packages = ['krop'],
         scripts = ['bin/krop'],
         classifiers = [
-            'Development Status :: 4 - Beta',
+            'Development Status :: 3 - Alpha',
             'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
             'Topic :: Utilities',
             'Intended Audience :: End Users/Desktop',
+            # 'Programming Language :: Python :: 2',
             'Programming Language :: Python :: 3',
             'Environment :: X11 Applications :: Qt',
         ],
