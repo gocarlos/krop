@@ -1,6 +1,9 @@
 # Snap files
 *.snap
 *.tar.bz2
+snap/.snapcraft
+stage/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
