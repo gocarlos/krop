@@ -19,72 +19,20 @@ apps:
       - x11
       - gsettings
 
-
-# parts:
-#   krop-app:
-#     source:         .
-#     plugin:         python
-#     python-version: python3
-#     after:          [desktop-qt5]
-#   desktop-qt5:
-#     stage-packages:
-#       - libxkbcommon0
-#       - ttf-ubuntu-font-family
-#       - dmz-cursor-theme
-#       - light-themes
-#       - shared-mime-info
-#       - libqt5gui5
-#       - libgdk-pixbuf2.0-0
-#       - libqt5svg5 # for loading icon themes which are svg
-#       - locales-all
-#       - python3-sip
-#       # - python3-poppler-qt4
-#       - python3-poppler-qt5
-#       - python3-pypdf2
-#       # - python3-pyqt4
-#       - python3-pyqt5
-#
-#       # FIXME:      check if those packages are needed.
-#       - xcursor-themes
-#       - fonts-liberation
-#       # - libqtgui4
-#       # - libqtgui5
-#       # - libqtcore4
-#       # - libqtcore5
-#
-#       - adwaita-icon-theme
-#       - gnome-themes-standard
-#
-#       - libcanberra-gtk-module
-#       - libcanberra-gtk3-module
-#       - xdg-utils  # https://www.freedesktop.org/wiki/Software/xdg-utils/
-#
-#       - libgail-common
-#       - libatk-adaptor
-#       - unity-gtk-module-common
-
-
 parts:
   krop-app:
     plugin:       python
     python-version: python3
     stage-packages:
       - python3-sip
-      # - python3-poppler-qt4
       - python3-poppler-qt5
       - python3-pypdf2
-      # - python3-pyqt4
       - python3-pyqt5
 
       # FIXME:    check if those packages are needed.
       - xcursor-themes
       - fonts-liberation
-      # - libqtgui4
-      # - libqtgui5
       - libqt5gui5
-
-      # - libqtcore4
-      # - libqtcore5
       - libqt5core5a
 
       - dmz-cursor-theme
@@ -101,5 +49,4 @@ parts:
       - libatk-adaptor
       - unity-gtk-module-common
 
-    # after:      [desktop-qt4]
     after:        [desktop-qt5]
