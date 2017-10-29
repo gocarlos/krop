@@ -13,17 +13,24 @@ the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from krop.config import PYQT5
+from krop.qt import *
 
-try:
-    from popplerqt4 import Poppler
-except ImportError:
-    _msg = "Please install popplerqt4 first."\
-        "\n\tOn recent versions of Ubuntu, the following should do the trick:"\
-        "\n\tsudo apt-get install python-poppler-qt4"\
-        "\n\t(or, if using python3) sudo apt-get install python3-poppler-qt4"
-    raise RuntimeError(_msg)
+if PYQT5:
+    try:
+        from popplerqt5 import Poppler
+    except ImportError:
+        _msg = "Please install popplerqt5 first."
+        raise RuntimeError(_msg)
+else:
+    try:
+        from popplerqt4 import Poppler
+    except ImportError:
+        _msg = "Please install popplerqt4 first."\
+            "\n\tOn recent versions of Ubuntu, the following should do the trick:"\
+            "\n\tsudo apt-get install python-poppler-qt4"\
+            "\n\t(or, if using python3) sudo apt-get install python3-poppler-qt4"
+        raise RuntimeError(_msg)
 
 from krop.viewerselections import ViewerSelections
 
@@ -101,7 +108,7 @@ class AbstractViewerItem(QGraphicsItem):
             return None
         if self._images[idx] is None:
             self._images[idx] = self.cacheImage(idx)
-        return self._images[idx]        
+        return self._images[idx]
 
     def mousePressEvent(self, event):
         self.selections.mousePressEvent(event)
@@ -129,7 +136,7 @@ class AbstractViewerItem(QGraphicsItem):
     def isEmpty(self):
         return self.numPages() <= 0
 
-    def cacheImage(self, idx):        
+    def cacheImage(self, idx):
         return None
 
     def cropValues(self, idx):
@@ -149,12 +156,12 @@ class PopplerViewerItem(AbstractViewerItem):
                     Poppler.Document.TextAntialiasing)
 
     def numPages(self):
-        if self._pdfdoc is None:    
+        if self._pdfdoc is None:
             return 0
         else:
             return self._pdfdoc.numPages()
 
-    def cacheImage(self, idx):        
+    def cacheImage(self, idx):
         page = self._pdfdoc.page(idx)
         return page.renderToImage(96.0, 96.0)
         # return page.renderToImage()
