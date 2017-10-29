@@ -12,13 +12,8 @@ the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 """
 
-<<<<<<< HEAD
 # from distutils.core import setup
 from setuptools import setup
-=======
-from distutils.core import setup
->>>>>>> upstream/new/pyqt5
-
 
 # Automatically determine version from first line of ChangeLog file
 import re
@@ -52,7 +47,7 @@ setup(
             'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
             'Topic :: Utilities',
             'Intended Audience :: End Users/Desktop',
-            'Programming Language :: Python :: 2',
+            # 'Programming Language :: Python :: 2',
             'Programming Language :: Python :: 3',
             'Environment :: X11 Applications :: Qt',
         ],

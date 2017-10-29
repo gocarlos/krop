@@ -81,15 +81,9 @@ class DeviceTypeManager:
         count = settings.beginReadArray("devicetypes")
         for i in range(count):
             settings.setArrayIndex(i)
-<<<<<<< HEAD
-            name = settings.value("name").toString()
-            width = settings.value("width").toInt()[0]
-            height = settings.value("height").toInt()[0]
-=======
             name = settings.value("name")
             width = int(settings.value("width"))
             height = int(settings.value("height"))
->>>>>>> upstream/new/pyqt5
             self.addType(name, width, height)
         settings.endArray()
         if count==0:
@@ -157,30 +151,6 @@ class MainWindow(QKMainWindow):
             self.ui.buttonLast.setFlat(False)
 
 
-<<<<<<< HEAD
-        self.connect(self.ui.actionOpenFile, SIGNAL("triggered()"), self.slotOpenFile)
-        self.connect(self.ui.actionSelectFile, SIGNAL("triggered()"), self.slotSelectFile)
-        self.connect(self.ui.actionKrop, SIGNAL("triggered()"), self.slotKrop)
-        self.connect(self.ui.actionZoomIn, SIGNAL("triggered()"), self.slotZoomIn)
-        self.connect(self.ui.actionZoomOut, SIGNAL("triggered()"), self.slotZoomOut)
-        self.connect(self.ui.actionFitInView, SIGNAL("toggled(bool)"), self.slotFitInView)
-        self.connect(self.ui.actionPreviousPage, SIGNAL("triggered()"), self.slotPreviousPage)
-        self.connect(self.ui.actionNextPage, SIGNAL("triggered()"), self.slotNextPage)
-        self.connect(self.ui.actionFirstPage, SIGNAL("triggered()"), self.slotFirstPage)
-        self.connect(self.ui.actionLastPage, SIGNAL("triggered()"), self.slotLastPage)
-        self.connect(self.ui.actionDeleteSelection, SIGNAL("triggered()"), self.slotDeleteSelection)
-        self.connect(self.ui.actionTrimMargins, SIGNAL("triggered()"), self.slotTrimMargins)
-        self.connect(self.ui.actionTrimMarginsAll, SIGNAL("triggered()"), self.slotTrimMarginsAll)
-        self.connect(self.ui.documentView, SIGNAL('customContextMenuRequested(const QPoint&)'), self.slotContextMenu)
-        self.connect(self.ui.editCurrentPage, SIGNAL('textEdited(const QString&)'), self.slotCurrentPageEdited)
-        self.connect(self.ui.radioSelAll, SIGNAL("toggled(bool)"), self.slotSelectionMode)
-        self.connect(self.ui.radioSelEvenOdd, SIGNAL("toggled(bool)"), self.slotSelectionMode)
-        self.connect(self.ui.radioSelIndividual, SIGNAL("toggled(bool)"), self.slotSelectionMode)
-        # self.connect(self.ui.editSelExceptions, SIGNAL("editingFinished()"), self.slotSelExceptionsChanged)
-        self.connect(self.ui.editSelExceptions, SIGNAL('textEdited(const QString&)'), self.slotSelExceptionsEdited)
-        self.connect(self.ui.comboDevice, SIGNAL("currentIndexChanged(int)"), self.slotDeviceTypeChanged)
-        self.connect(self.ui.editAspectRatio, SIGNAL("editingFinished()"), self.slotAspectRatioChanged)
-=======
         self.ui.actionOpenFile.triggered.connect(self.slotOpenFile)
         self.ui.actionSelectFile.triggered.connect(self.slotSelectFile)
         self.ui.actionKrop.triggered.connect(self.slotKrop)
@@ -203,7 +173,6 @@ class MainWindow(QKMainWindow):
         self.ui.editSelExceptions.textEdited.connect(self.slotSelExceptionsEdited)
         self.ui.comboDevice.currentIndexChanged.connect(self.slotDeviceTypeChanged)
         self.ui.editAspectRatio.editingFinished.connect(self.slotAspectRatioChanged)
->>>>>>> upstream/new/pyqt5
 
         self.pdfScene = QGraphicsScene(self.ui.documentView)
         self.pdfScene.setBackgroundBrush(self.pdfScene.palette().dark())
@@ -230,19 +199,11 @@ class MainWindow(QKMainWindow):
     def readSettings(self):
         settings = QSettings()
         self.ui.editPadding.setText(
-<<<<<<< HEAD
-                settings.value("trim/padding", 2).toString())
-        self.ui.editAllowedChanges.setText(
-                settings.value("trim/allowedchanges", 0).toString())
-        self.ui.editSensitivity.setText(
-                settings.value("trim/sensitivity", 5).toString())
-=======
                 settings.value("trim/padding", 2))
         self.ui.editAllowedChanges.setText(
                 settings.value("trim/allowedchanges", 0))
         self.ui.editSensitivity.setText(
                 settings.value("trim/sensitivity", 5))
->>>>>>> upstream/new/pyqt5
 
         self.devicetypes.loadTypes(settings)
 
@@ -278,13 +239,10 @@ class MainWindow(QKMainWindow):
     def slotOpenFile(self):
         fileName = QFileDialog.getOpenFileName(self,
              self.tr("Open PDF"), "", self.tr("PDF Files (*.pdf)"));
-<<<<<<< HEAD
-=======
         # in PyQt5, getOpenFileName is what used to be
         # getOpenFileNameAndFilter
         if PYQT5:
             fileName = fileName[0]
->>>>>>> upstream/new/pyqt5
         self.openFile(fileName)
 
     def slotSelectFile(self):

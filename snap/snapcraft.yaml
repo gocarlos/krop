@@ -21,7 +21,7 @@ apps:
 
 parts:
   krop-app:
-    plugin:         python
+    plugin:       python
     python-version: python3
     stage-packages:
       - python3-sip
@@ -31,7 +31,7 @@ parts:
       # - python3-pyqt4
       - python3-pyqt5
 
-      # FIXME: check if those packages are needed.
+      # FIXME:    check if those packages are needed.
       - xcursor-themes
       - fonts-liberation
       # - libqtgui4
@@ -53,5 +53,5 @@ parts:
       - libatk-adaptor
       - unity-gtk-module-common
 
-    # after:          [desktop-qt4]
-    after:          [desktop-qt5]
+    # after:      [desktop-qt4]
+    after:        [desktop-qt5]
