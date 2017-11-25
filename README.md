@@ -27,10 +27,7 @@ The installation can be done using the terminal or using the software center.
     ```bash
     sudo snap install krop
     ```
-* <img src="snap/gui/Gnome-software.jpg" align="top" width="50" /> Software center -> search for **krop**.
-
-* Direct [download](https://snapcraft.io/krop/)
-
+* <img src="snap/gui/Gnome-software.jpg" align="top" width="50" /> [Software center link](https://snapcraft.io/krop/) or search  for **krop** in the Software center.
 
 ## Usage
 * ##### To start GUI type:
