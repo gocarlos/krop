@@ -1,5 +1,6 @@
 # Snap files
 *.snap
+prime
 *.tar.bz2
 snap/.snapcraft
 stage/
