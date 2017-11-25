@@ -17,17 +17,10 @@ import sys
 from os.path import exists, splitext
 
 from krop.qt import *
-from krop.config import PYQT5, KDE
 
-if KDE:
-    from PyKDE4.kdeui import KMainWindow as QKMainWindow
-else:
-    QKMainWindow = QMainWindow
+QKMainWindow = QMainWindow
 
-if PYQT5:
-    from krop.mainwindowui_qt5 import Ui_MainWindow
-else:
-    from krop.mainwindowui_qt4 import Ui_MainWindow
+from krop.mainwindowui_qt5 import Ui_MainWindow
 
 from krop.viewerselections import ViewerSelections, ViewerSelectionItem
 from krop.vieweritem import ViewerItem
@@ -233,8 +226,7 @@ class MainWindow(QKMainWindow):
              self.tr("Open PDF"), "", self.tr("PDF Files (*.pdf)"));
         # in PyQt5, getOpenFileName is what used to be
         # getOpenFileNameAndFilter
-        if PYQT5:
-            fileName = fileName[0]
+        fileName = fileName[0]
         self.openFile(fileName)
 
     def slotSelectFile(self):
