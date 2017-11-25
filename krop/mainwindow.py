@@ -15,11 +15,6 @@ the Free Software Foundation; either version 3 of the License, or
 
 import sys
 from os.path import exists, splitext
-try:
-    str_unicode = unicode
-except:
-    str_unicode = str
-
 
 from krop.qt import *
 from krop.config import PYQT5, KDE
@@ -220,7 +215,7 @@ class MainWindow(QKMainWindow):
             self.viewer.load(fileName)
             if not self.viewer.isEmpty():
                 self.fileName = fileName
-                outputFileName = "%s-cropped.pdf" % splitext(str_unicode(fileName))[0]
+                outputFileName = "%s-cropped.pdf" % splitext(str(fileName))[0]
                 self.slotFitInView(self.ui.actionFitInView.isChecked())
             else:
                 self.fileName = ''
@@ -269,8 +264,8 @@ class MainWindow(QKMainWindow):
 
     def slotKrop(self):
         # file names
-        inputFileName = str_unicode(self.fileName)
-        outputFileName = str_unicode(self.ui.editFile.text())
+        inputFileName = str(self.fileName)
+        outputFileName = str(self.ui.editFile.text())
 
         # which pages
         s = str(self.ui.editWhichPages.text())
