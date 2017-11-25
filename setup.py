@@ -12,6 +12,11 @@ the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 """
 
+import sys
+if sys.version_info < (3,1):
+    sys.exit('Sorry, Python < 2.7 is not supported')
+
+
 # from distutils.core import setup
 from setuptools import setup
 
@@ -43,11 +48,10 @@ setup(
         packages = ['krop'],
         scripts = ['bin/krop'],
         classifiers = [
-            'Development Status :: 3 - Alpha',
+            'Development Status :: 3 - Beta',
             'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
             'Topic :: Utilities',
             'Intended Audience :: End Users/Desktop',
-            # 'Programming Language :: Python :: 2',
             'Programming Language :: Python :: 3',
             'Environment :: X11 Applications :: Qt',
         ],

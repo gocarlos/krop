@@ -198,12 +198,9 @@ class MainWindow(QKMainWindow):
 
     def readSettings(self):
         settings = QSettings()
-        self.ui.editPadding.setText(
-                settings.value("trim/padding", 2))
-        self.ui.editAllowedChanges.setText(
-                settings.value("trim/allowedchanges", 0))
-        self.ui.editSensitivity.setText(
-                settings.value("trim/sensitivity", 5))
+        self.ui.editPadding.setText(str(settings.value("trim/padding", 2)))
+        self.ui.editAllowedChanges.setText(str(settings.value("trim/allowedchanges", 0)))
+        self.ui.editSensitivity.setText(str(settings.value("trim/sensitivity", 5)))
 
         self.devicetypes.loadTypes(settings)
 

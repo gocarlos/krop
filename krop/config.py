@@ -9,6 +9,7 @@ try:
             import PyQt5
             PYQT5 = True
         except ImportError:
+            print("Could not find Qt5...\n")
             pass
     if not PYQT5:
         import PyQt4
