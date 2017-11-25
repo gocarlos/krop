@@ -16,23 +16,7 @@ the Free Software Foundation; either version 3 of the License, or
 import copy
 import sys
 
-# Unless specified otherwise, use PyPDF2 instead of pyPdf if available.
-usepypdf2 = '--no-PyPDF2' not in sys.argv
-if usepypdf2:
-    try:
-        from PyPDF2 import PdfFileReader, PdfFileWriter
-    except ImportError:
-        usepypdf2 = False
-if not usepypdf2:
-    try:
-        from pyPdf import PdfFileReader, PdfFileWriter
-    except ImportError:
-        _msg = "Please install PyPDF2 (or its predecessor pyPdf) first."\
-            "\n\tOn recent versions of Ubuntu, the following should do the trick:"\
-            "\n\tsudo apt-get install python-pypdf2"\
-            "\n\t(or, if using python3) sudo apt-get install python3-pypdf2"
-        raise RuntimeError(_msg)
-
+from PyPDF2 import PdfFileReader, PdfFileWriter
 
 class AbstractPdfFile:
     """Abstract class for loading a PDF document used in a corresponding
@@ -60,10 +44,7 @@ class PyPdfFile(AbstractPdfFile):
     def __init__(self):
         self.reader = None
     def loadFromStream(self, stream):
-        if usepypdf2:
-            self.reader = PdfFileReader(stream, strict=False)
-        else:
-            self.reader = PdfFileReader(stream)
+        self.reader = PdfFileReader(stream, strict=False)
     def getPage(self, nr):
         page = self.reader.getPage(nr-1)
 
@@ -104,4 +85,3 @@ class PyPdfCropper(AbstractPdfCropper):
 
 PdfFile = PyPdfFile
 PdfCropper = PyPdfCropper
-
