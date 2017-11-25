@@ -13,8 +13,8 @@ the Free Software Foundation; either version 3 of the License, or
 """
 
 import sys
-if sys.version_info < (3,1):
-    sys.exit('Sorry, Python < 2.7 is not supported')
+if not sys.version_info[0] == 3:
+    sys.exit("Sorry, Python 2.x is not supported anymore")
 
 
 # from distutils.core import setup
@@ -47,6 +47,7 @@ setup(
         keywords = 'pdf crop ereader',
         packages = ['krop'],
         scripts = ['bin/krop'],
+        python_requires=">=3.3",
         classifiers = [
             'Development Status :: 3 - Beta',
             'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
