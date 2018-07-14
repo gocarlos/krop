@@ -17,6 +17,8 @@ apps:
   krop:
     command:        desktop-launch krop
     plugs:
+      - desktop
+      - desktop-legacy
       - unity7
       - home
       - removable-media
