@@ -33,9 +33,7 @@ The installation can be done using the terminal or using the software center.
 * ##### To start GUI type:
 
     ```bash
-    # Due to the nature of the snap apps:
-    # instead of krop, on has to type krop.krop-app to use the app
-    krop.krop-app
+    krop
     ```
 
 

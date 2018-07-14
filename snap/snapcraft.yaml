@@ -14,7 +14,7 @@ confinement:        strict
 type:               app
 
 apps:
-  krop-app:
+  krop:
     command:        desktop-launch krop
     plugs:
       - unity7
