@@ -1,4 +1,4 @@
-<img src="/snap/gui/icon.png">
+![krop](/snap/gui/icon.png)
 
 # Krop
 
