@@ -7,7 +7,7 @@ PyPDF2==1.26.0
 
 # PyQT 5
     PyQt5-sip==12.7.1
-PyQt5==5.14.1
+PyQt5==5.14.2
 
 # pipreqs dep tree
     docopt==0.6.2
