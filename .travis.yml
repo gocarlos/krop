@@ -1,0 +1,18 @@
+language: python
+
+os: linux
+
+dist: bionic
+
+python:
+  - "3.6.10"
+  - "3.7.7"
+  - "3.8.2"
+
+install:
+  - pip install -r requirements.txt
+
+jobs:
+  fast_finish: true
+
+script: python3 setup.py
