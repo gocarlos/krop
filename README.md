@@ -4,11 +4,11 @@
 
 Krop is a simple graphical tool to crop the pages of PDF files. It is written in Python and relies on PyQT, python-poppler-qt4 and pyPDF for its functionality. A unique feature of krop is its ability to automatically split pages into subpages to fit the limited screen size of devices such as eReaders. This is particularly useful, if your eReader does not support convenient scrolling.
 
+## Build status
+
 [![Snap Status](https://build.snapcraft.io/badge/gocarlos/krop.svg)](https://build.snapcraft.io/user/gocarlos/krop)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/962d353f2fab4ea2bb594185dd506f0a)](https://www.codacy.com/manual/edumco/krop?utm_source=github.com&utm_medium=referral&utm_content=edumco/krop&utm_campaign=Badge_Grade)
-[![Dependabot](https://api.dependabot.com/badges/status?host=github&repo=edumco/krop)](https://api.dependabot.com/badges/status?host=github&repo=edumco/krop)
 [![Known Vulnerabilities](https://snyk.io/test/github/edumco/krop/badge.svg)](https://snyk.io/test/github/edumco/krop)
-[![Build Status](https://semaphoreci.com/api/v1/edumco/krop/branches/master/badge.svg)](https://semaphoreci.com/edumco/krop)
 
 ## Installation
 
