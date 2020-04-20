@@ -9,7 +9,7 @@ try:
         pass
 
 except ImportError:
-    _msg = "Please install PyQt4 or PyQt5 first."
+    _msg = "Please install PyQt5 first."
     raise RuntimeError(_msg)
 
 sip.setapi('QString', 2)
