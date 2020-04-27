@@ -1,5 +1,6 @@
 name:               krop
-version:            0.4.13.1
+version:            0.5.1
+#version:            0.4.13.1
 summary:            A tool to crop PDF files
 description:        |
   krop is a simple graphical tool to crop the pages of PDF files.
@@ -10,12 +11,19 @@ description:        |
   convenient scrolling.
 
 grade:              stable
-confinement:        strict
+confinement:        devmode
 type:               app
+base:               core18
 
 apps:
   krop:
     command:        desktop-launch krop
+    extensions: 
+      - kde-neon
+    command-chain:
+      - snap/command-chain/snapcraft-runner
+    environment:
+      HOME: $SNAP_USER_COMMON
     plugs:
       - desktop
       - desktop-legacy
@@ -26,8 +34,23 @@ apps:
       - x11
       - gsettings
 
-parts:
+plugs:
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/share/themes
+    default-provider: gtk-common-themes:gtk-3-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/share/icons
+    default-provider: gtk-common-themes:icon-themes
+  kde-frameworks-5-plug:
+    interface: content
+    default-provider: kde-frameworks-5-core18:kde-frameworks-5-core18-slot
+    
+parts:      
   krop-app:
+    source: https://github.com/arminstraub/krop/archive/v$SNAPCRAFT_PROJECT_VERSION.tar.gz   
+    #source: $META/root/project
     plugin:       python
     python-version: python3
     stage-packages:
@@ -37,16 +60,17 @@ parts:
       - python3-pyqt5 # needed
 
       # FIXME:    check if those packages are needed.
-      - xcursor-themes
-      - fonts-liberation
-      - libqt5gui5
-      - libqt5core5a
-
-      - dmz-cursor-theme
-      - light-themes
-      - adwaita-icon-theme
-      - gnome-themes-standard
-      - shared-mime-info
+      #- xcursor-themes
+      #- fonts-liberation
+      #- libqt5gui5
+      #- libqt5core5a
+      
+      - appmenu-qt
+      #- dmz-cursor-theme
+      #- light-themes
+      #- adwaita-icon-theme
+      #- gnome-themes-standard
+      #- shared-mime-info
 
       - libcanberra-gtk-module
       - libcanberra-gtk3-module
@@ -55,5 +79,4 @@ parts:
       - libgail-common
       - libatk-adaptor
       - unity-gtk-module-common
-
-    after:        [desktop-qt5]
+    #after:        [desktop-qt5]
