@@ -1,6 +1,5 @@
 name:               krop
 version:            0.5.1
-#version:            0.4.13.1
 summary:            A tool to crop PDF files
 description:        |
   krop is a simple graphical tool to crop the pages of PDF files.
@@ -11,7 +10,7 @@ description:        |
   convenient scrolling.
 
 grade:              stable
-confinement:        devmode
+confinement:        strict
 type:               app
 base:               core18
 
@@ -45,12 +44,12 @@ plugs:
     default-provider: gtk-common-themes:icon-themes
   kde-frameworks-5-plug:
     interface: content
+    target: kf5
     default-provider: kde-frameworks-5-core18:kde-frameworks-5-core18-slot
     
 parts:      
   krop-app:
     source: https://github.com/arminstraub/krop/archive/v$SNAPCRAFT_PROJECT_VERSION.tar.gz   
-    #source: $META/root/project
     plugin:       python
     python-version: python3
     stage-packages:
@@ -58,25 +57,10 @@ parts:
       - python3-poppler-qt5
       - python3-pypdf2
       - python3-pyqt5 # needed
-
-      # FIXME:    check if those packages are needed.
-      #- xcursor-themes
-      #- fonts-liberation
-      #- libqt5gui5
-      #- libqt5core5a
-      
       - appmenu-qt
-      #- dmz-cursor-theme
-      #- light-themes
-      #- adwaita-icon-theme
-      #- gnome-themes-standard
-      #- shared-mime-info
-
       - libcanberra-gtk-module
       - libcanberra-gtk3-module
       - xdg-utils  # https://www.freedesktop.org/wiki/Software/xdg-utils/
-
       - libgail-common
       - libatk-adaptor
       - unity-gtk-module-common
-    #after:        [desktop-qt5]
