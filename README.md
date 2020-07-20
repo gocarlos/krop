@@ -7,6 +7,8 @@ Krop is a simple graphical tool to crop the pages of PDF files. It is written in
 ## Build status
 
 [![Snap Status](https://build.snapcraft.io/badge/gocarlos/krop.svg)](https://build.snapcraft.io/user/gocarlos/krop)
+[![krop](https://snapcraft.io//krop/badge.svg)](https://snapcraft.io/krop)
+[![krop](https://snapcraft.io//krop/trending.svg?name=0)](https://snapcraft.io/krop)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/962d353f2fab4ea2bb594185dd506f0a)](https://www.codacy.com/manual/edumco/krop?utm_source=github.com&utm_medium=referral&utm_content=edumco/krop&utm_campaign=Badge_Grade)
 [![Known Vulnerabilities](https://snyk.io/test/github/edumco/krop/badge.svg)](https://snyk.io/test/github/edumco/krop)
 
