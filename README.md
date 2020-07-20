@@ -22,11 +22,11 @@ The installation can be done using the terminal or using the software center.
 
 1. To start GUI type `krop`
 
-2. To start the GUI app without terminal search for krop in Dvisual menu of your distro.
+2. To start the GUI app without terminal search for krop in the visual menu of your Linux distribution.
 
 3. To use the app without GUI: `krop.krop-app --help`
 
-Or consult [Armins webpage](http://arminstraub.com/software/krop#afewtricks)
+Or consult [Armin's webpage](http://arminstraub.com/software/krop#afewtricks)
 
 ## Disclaimer
 
